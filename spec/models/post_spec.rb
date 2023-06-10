@@ -18,7 +18,7 @@ RSpec.describe Post, type: :model do
     let(:user) { User.create!(name: 'John', posts_counter: 0) }
     let!(:post1) { user.posts.create!(title: 'Post 1', likes_counter: 0, comments_counter: 0) }
     let!(:post2) { user.posts.create!(title: 'Post 2', likes_counter: 0, comments_counter: 0) }
-  
+
     it 'updates the posts_counter of the user' do
       expect do
         Post.update_posts_counter(user.id)

@@ -5,7 +5,7 @@ RSpec.describe Comment, type: :model do
     it { should belong_to(:user).with_foreign_key(:author_id) }
     it { should belong_to(:post) }
   end
-  
+
   it 'increments comments_counter' do
     user = User.new(
       name: 'John Doe',
