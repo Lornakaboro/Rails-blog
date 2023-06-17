@@ -14,115 +14,187 @@
  *= require_self
  */
 
-/* * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    color: black;
-  }
+.comment_form_holder,
+.like_form_holder {
+  margin-top: 20px;
+}
 
-  .container {
-    margin: 0 auto;
-    width: 30%;
-  }
+.comment_form_holder h3,
+.like_form_holder h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-  h1 {
-    margin-bottom: 20px;
-  }
+.form_buttons {
+  display: flex;
+  gap: 10px;
+}
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-  }
+.comment_form_holder input[type="submit"],
+.like_form_holder input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  .user,
-  .user-details {
-    display: flex;
-    gap: 30px;
-    text-decoration: none;
-  }
+.comment_form_holder input[type="submit"]:hover,
+.like_form_holder input[type="submit"]:hover {
+  background-color: #0056b3;
+}
 
-  li:nth-child(even) {
-    background-color: aliceblue;
-  }
+.post_form {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+}
 
-  .userphoto,
-  .username {
-    border: 1px solid black; */
+.post_form h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-/* }
+.post_form div {
+  margin-bottom: 10px;
+}
 
-  .userphoto {
-    width: 100px;
-    height: 100px;
-  }
+.post_title_input,
+.post_text_input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-  .username {
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-    width: 70%;
-  }
+.post_button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  .username p {
-    margin-top: 30px;
-    display: flex;
-    justify-content: flex-end;
-  }
+.post_button:hover {
+  background-color: #0056b3;
+}
 
-  a {
-    text-decoration: none;
-  }
+.post_detail_card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 5rem;
+}
 
-  .user-details {
-    flex-direction: column;
-    gap: 10px;
-  }
+.post_title_card {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
-  .bio,
-  .eachpost {
-    border: 1px solid;
-    padding: 2%;
-  }
+.post_author_name {
+  color: #333;
+}
 
-  .bio {
-    margin-bottom: 10px;
-  }
+.post_counters {
+  margin-left: auto;
+}
 
-  .bio h4,
-  .eachpost h4 {
-    margin-bottom: 20px;
-  }
+.my_comments {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
 
-  .eachpost h6,
-  .post h6 {
-    text-align: right;
-  }
+.user_bio {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
 
-  .button {
-    margin: auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    align-self: center;
-    justify-self: center;
-  }
+.post_card {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
 
-  .post {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
+.post_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .post div {
-    border: 1px solid;
-    padding: 2%;
-  }
+.post_content p {
+  margin-right: 0;
+}
 
-  .gap {
-    display: flex;
-    gap: 30px;
-  } */
+.post_counters {
+  margin-left: auto;
+}
+
+.see_all_posts {
+  text-align: center;
+  margin-top: 1rem; 
+}
+
+.see_all_posts a {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-decoration: none; 
+}
+
+.see_all_posts a:hover {
+  background-color: #0056b3;
+}
+
+.button_holder {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.create_post_btn {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.create_post_btn:hover {
+  background-color: #0056b3;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+}
