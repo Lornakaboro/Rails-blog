@@ -14,11 +14,11 @@
  *= require_self
  */
 
- .user-card {
+.user-card {
   display: flex;
   align-items: center;
   gap: 5rem;
-  border : 1px solid black;
+  border: 1px solid black;
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -42,7 +42,7 @@
 .post_card {
   background-color: #fff;
   padding: 1rem;
- border: 1px solid black;
+  border: 1px solid black;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -55,10 +55,6 @@
 
 .post_content p {
   margin-right: 0; /* Remove default margin to align to the right */
-}
-
-.post_counters {
-  margin-left: auto; /* Push the counters to the far right */
 }
 
 .see_all_posts {
@@ -110,5 +106,3 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
 }
-
-
