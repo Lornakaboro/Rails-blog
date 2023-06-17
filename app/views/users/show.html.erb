@@ -1,1 +1,21 @@
-<h1>Here is a selected user</h1>
+<% if @user.user_recent_posts.empty? %>
+  <h2>No Posts</h2>
+  <p>Please add a post</p>
+<% else %>
+  <% @user.user_recent_posts.each do |post| %>
+    <%= link_to user_post_path(user_id: @user.id, author_id: post.id) do %>
+      <div>
+        <div>
+          <h1><%= post.title %></h1>
+          <p><%= post.text %></p>
+        </div>
+        <div>
+          <p>Comments: <%= post.comment_counter %>, Likes: <%= post.likes_counter %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <div>
+    <%= link_to 'See all posts', user_posts_path(user_id: @user.id) %>
+  </div>
+<% end %>
