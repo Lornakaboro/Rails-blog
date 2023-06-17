@@ -1,21 +1,18 @@
-<% if @user.user_recent_posts.empty? %>
-  <h2>No Posts</h2>
-  <p>Kindly submit a post</p>
+<div class="post_detail_card_header"">
+<div class="parent">
+ <p class ="post_title_card"> Post # <%=@post.id%> by <span class="post_author_name"><%=@post.author.name%></span></p>
+<p><%= @post.text %></p>
+</div>
+ <p class="post_counters">Comments: <%=@post.comments_counter%> Likes: <%=@post.likes_counter%></p>
+
+</div>
+
+<div class="my_comments">
+<% if @comments.empty? %>
+ <p>No Comments</p>
 <% else %>
-  <% @user.user_recent_posts.each do |post| %>
-    <%= link_to user_post_path(user_id: @user.id, author_id: post.id) do %>
-      <div>
-        <div>
-          <h1><%= post.title %></h1>
-          <p><%= post.text %></p>
-        </div>
-        <div>
-          <p>Comments: <%= post.comment_counter %>, Likes: <%= post.likes_counter %></p>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-  <div>
-    <%= link_to 'See all posts', user_posts_path(user_id: @user.id) %>
-  </div>
+ <% @comments.each do |comment| %>
+   <p><%= comment.author.name %>: <%= comment.text %></p>
+ <% end %>
 <% end %>
+</div>

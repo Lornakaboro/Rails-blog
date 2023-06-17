@@ -1,21 +1,19 @@
+<%= render 'shared/user', user:@user%>
+
 <% if @user.user_recent_posts.empty? %>
   <h2>No Posts</h2>
-  <p>Please add a post</p>
+  <p>Kindly submit a post</p>
 <% else %>
-  <% @user.user_recent_posts.each do |post| %>
-    <%= link_to user_post_path(user_id: @user.id, author_id: post.id) do %>
-      <div>
-        <div>
-          <h1><%= post.title %></h1>
-          <p><%= post.text %></p>
-        </div>
-        <div>
-          <p>Comments: <%= post.comment_counter %>, Likes: <%= post.likes_counter %></p>
-        </div>
+      <div class="user_bio">
+        <h3>Bio</h3>
+        <p><%= @user.bio %><p>
       </div>
-    <% end %>
-  <% end %>
-  <div>
-    <%= link_to 'See all posts', user_posts_path(user_id: @user.id) %>
-  </div>
+         <% @user.user_recent_posts.each do |post| %>
+
+      <%= render 'shared/post', post:post %>
+   <%end%>
+<div class="see_all_posts">
+  <%= link_to 'See all posts', user_posts_path(user_id: @user.id) %>
+</div>
 <% end %>
+
