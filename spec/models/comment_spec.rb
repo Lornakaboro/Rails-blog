@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   describe 'associations' do
-    it { should belong_to(:user).with_foreign_key(:author_id) }
+    it { should belong_to(:author).with_foreign_key(:author_id) }
     it { should belong_to(:post) }
   end
 
