@@ -50,6 +50,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'capybara'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
@@ -74,3 +75,4 @@ group :test do
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
