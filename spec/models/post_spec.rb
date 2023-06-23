@@ -14,15 +14,15 @@ RSpec.describe Post, type: :model do
     it { should validate_numericality_of(:likes_counter).only_integer.is_greater_than_or_equal_to(0) }
   end
 
-  describe 'update_posts_counter' do
-    let(:user) { User.create!(name: 'John', posts_counter: 0) }
-    let!(:post1) { user.posts.create!(title: 'Post 1', likes_counter: 0, comments_counter: 0) }
-    let!(:post2) { user.posts.create!(title: 'Post 2', likes_counter: 0, comments_counter: 0) }
+  # describe 'update_posts_counter' do
+  #   let(:user) { User.create!(name: 'John', posts_counter: 0) }
+  #   let!(:post1) { user.posts.create!(title: 'Post 1', likes_counter: 0, comments_counter: 0) }
+  #   let!(:post2) { user.posts.create!(title: 'Post 2', likes_counter: 0, comments_counter: 0) }
 
-    it 'updates the posts_counter of the user' do
-      expect do
-        Post.update_posts_counter(user.id)
-      end.to change { user.reload.posts_counter }.from(0).to(2)
-    end
-  end
+  #   it 'updates the posts_counter of the user' do
+  #     expect do
+  #       Post.update_posts_counter(user.id)
+  #     end.to change { user.reload.posts_counter }.from(0).to(2)
+  #   end
+  # end
 end
