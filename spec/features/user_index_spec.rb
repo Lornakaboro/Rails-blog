@@ -11,11 +11,11 @@ RSpec.feature 'User Index Page', type: :feature do
 
   scenario 'I can see the username, profile picture, and number of posts for each user' do
     expect(page).to have_content(@user1.name)
-    expect(page.html).to include(@user1.photo)
+    expect(page).to have_selector("img[src='#{@user1.photo}']")
     expect(page).to have_content(@user1.posts_counter)
 
     expect(page).to have_content(@user2.name)
-    expect(page.html).to include(@user2.photo)
+    expect(page).to have_selector("img[src='#{@user2.photo}']")
     expect(page).to have_content(@user2.posts_counter)
   end
 
