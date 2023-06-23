@@ -45,10 +45,11 @@ RSpec.describe 'User Show Page', type: :feature do
 
     scenario "Redirect to user's posts index page" do
       visit user_path(@user1)
-      click_link 'See all posts'
-      save_and_open_page
-
+      puts "Before clicking: #{current_url}"
+      click_link "See all posts"
+      puts "After clicking: #{current_url}"
+    
       expect(current_path).to eq(user_posts_path(@user1))
-    end
+    end   
   end
 end
