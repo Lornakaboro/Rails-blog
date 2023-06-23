@@ -40,12 +40,12 @@ RSpec.describe 'User Show Page', type: :feature do
     end
 
     it 'should have a link to see all posts' do
-      expect(page.html).to include('See all posts')
-    end
+      expect(page).to have_link('See all posts', href: user_posts_path(@user1))
+    end    
 
     it 'should show next_path when clicked on see all posts' do
       click_on 'See all posts'
-      expect(current_path).to eq(current_path)
+      expect(current_path).to eq(user_posts_path(@user1))
     end
   end
 end
