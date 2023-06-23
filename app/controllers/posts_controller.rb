@@ -16,9 +16,9 @@ class PostsController < ApplicationController
   end
 
   def new
-  @current_user = current_user
-  @user = current_user
-  @post = @current_user.posts.new
+    @current_user = current_user
+    @user = current_user
+    @post = @current_user.posts.new
   end
 
   def create
@@ -29,8 +29,8 @@ class PostsController < ApplicationController
     else
       render :new
     end
-  end  
-  
+  end
+
   private
 
   def post_params
