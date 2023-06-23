@@ -18,7 +18,7 @@ RSpec.feature 'User Index Page', type: :feature do
     expect(page).to have_selector("img[src='#{@user2.photo}']")
     expect(page).to have_content(@user2.posts_counter)
   end
-  
+
   scenario 'When I click on a user, I am redirected to their show page' do
     visit users_path
     click_link @user1.name
