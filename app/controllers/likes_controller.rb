@@ -2,7 +2,10 @@ class LikesController < ApplicationController
   before_action :find_user, only: %i[new create]
   before_action :find_post, only: :create
 
-  def new; end
+  def new
+    @post = Post.find(params[:post_id])
+    @current_user = current_user
+  end
 
   def create
     @like = @post.likes.new(author: @user)
