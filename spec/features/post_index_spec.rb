@@ -16,7 +16,7 @@ RSpec.describe 'Post Index Page', type: :feature do
     end
 
     it 'should show user photo' do
-      expect(page.html).to include(@user1.photo)
+      expect(page).to have_selector("img[src='#{@user1.photo}']")
     end
 
     it 'should show posts_counter of clicked user' do
