@@ -21,3 +21,11 @@
     <%= link_to 'Create new post', new_user_post_path(user_id: @user.id) %>
   </div>
 <% end %>
+      <%= render 'shared/post', post:post %>
+   <%end%>
+<div class="see_all_posts">
+<a href="/users/<%=@user.id%>/posts" >
+See all posts
+</a>
+</div>
+<% end %>
