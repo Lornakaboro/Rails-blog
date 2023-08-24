@@ -11,5 +11,5 @@ class Post < ApplicationRecord
     author.update(posts_counter: author.posts.count)
   end
 
-  scope :recent_comments, ->(post_id) { Comment.where(post_id: post_id).order(created_at: :desc).limit(5) }
+  scope :recent_comments, ->(post_id) { Comment.where(post_id:).order(created_at: :desc).limit(5) }
 end
