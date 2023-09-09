@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def new
-    @post = Post.find(params[:post_id])
-    @current_user = current_user
+    @post = @current_user.posts.find(params[:post_id])
   end
 
   def create
@@ -14,6 +14,12 @@ class CommentsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to request.referrer
   end
 
   private
