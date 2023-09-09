@@ -110,6 +110,11 @@ To test the web app run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/KaboroLorna)
 - Linkedin [@linkedinprofile](https://www.linkedin.com/in/lorna-kaboro-23620b242/)
 
+👤 **David Katende**
+
+- GitHub: [@katended](https://github.com/katended)
+- Linkedin [@katendedavid](https://www.linkedin.com/in/katendedavid/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
