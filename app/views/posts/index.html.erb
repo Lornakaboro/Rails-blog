@@ -1,0 +1,16 @@
+<%= render 'shared/user', user:@user%>
+<% @posts.each do |post| %>
+  <%= render 'shared/post', post:post %>
+
+    <% if post.recent_comments.empty? %>
+      <p>No comments</p>
+    <% else %>
+    <% post.recent_comments.each do |comment| %>
+      <%= render 'shared/comment', comment:comment %>
+<% end %>
+    <% end %>
+<% end %>
+<div class="button_holder">
+<button>Pagination</button>
+<button><%= link_to 'Back', :back %></button>
+</div>
